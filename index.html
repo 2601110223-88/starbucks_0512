@@ -67,7 +67,6 @@
             align-items: center;
         }
 
-
         .content .textBox {
             position: relative;
             max-width: 600px;
@@ -95,6 +94,7 @@
             letter-spacing: 1px;
             text-decoration: none;
         }
+
         .content .imgBox {
             width: 600px;
             /* background-color: orange; */
@@ -104,6 +104,7 @@
             margin-top: 50px;
 
         }
+
         .content .imgBox img {
             max-width: 340px;
         }
@@ -157,7 +158,7 @@
     <section>
         <div class="circle"></div>
         <header>
-            <a href="" class="logo"><img src="./logo.png" alt=""></a>
+            <a href="" class="logo"><img src="./imgs/logo.png" alt=""></a>
             <ul>
                 <li><a href="">Home</a></li>
                 <li><a href="">Menu</a></li>
@@ -173,24 +174,21 @@
             </div>
 
             <div class="imgBox">
-                <img src="./img1.png" alt="" class="starbucks">
+                <img src="./imgs/img1.png" alt="" class="starbucks">
             </div>
         </div>
         <ul class="thumb">
-            <li><img src="./thumb1.png" alt="" onclick="imgSlider('img1.png');changeCircleColor('#017143')"></li>
-            <li><img src="./thumb2.png" alt="" onclick="imgSlider('img2.png');changeCircleColor('#eb7495')"></li>
-            <li><img src="./thumb3.png" alt="" onclick="imgSlider('img3.png');changeCircleColor('#d752b1')"></li>
+            <li><img src="./imgs/thumb1.png" alt="" onclick="imgSlider('./imgs/img1.png');changeCircleColor('#017143')"></li>
+            <li><img src="./imgs/thumb2.png" alt="" onclick="imgSlider('./imgs/img2.png');changeCircleColor('#eb7495')"></li>
+            <li><img src="./imgs/thumb3.png" alt="" onclick="imgSlider('./imgs/img3.png');changeCircleColor('#d752b1')"></li>
         </ul>
         <ul class="sci">
-            <li><a href=""><img src="./facebook.png" alt=""></a></li>
-            <li><a href=""><img src="./twitter.png" alt=""></a></li>
-            <li><a href=""><img src="./instagram.png" alt=""></a></li>
+            <li><a href=""><img src="./imgs/facebook.png" alt=""></a></li>
+            <li><a href=""><img src="./imgs/twitter.png" alt=""></a></li>
+            <li><a href=""><img src="./imgs/instagram.png" alt=""></a></li>
         </ul>
     </section>
 
-    
-
-    
     <script>
         function imgSlider(anything) {
             document.querySelector('.starbucks').src = anything;
