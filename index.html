@@ -43,8 +43,9 @@
         }
 
         header .logo {
-            position: relative;
-            max-width: 80px;
+           max-width: 20px; 
+           width: 100%;
+           height: auto;
         }
 
         header ul {
@@ -62,7 +63,7 @@
         header ul li a {
             display: inline-block;
             color: #655b5b;
-            margin-left: 40px;
+            margin-left: 30px;
             text-decoration: none;
         }
 
@@ -95,8 +96,8 @@
             display: inline-block;
             margin-top: 20px;
             padding: 8px 20px;
-            background: #faff9ad0;
-            color: #979797;
+            background: #c79affd0;
+            color: #e1dada;
             border-radius: 40px;
             font-weight: 500;
             letter-spacing: 1px;
@@ -121,8 +122,7 @@
             position: absolute;
             bottom: 20px;
             display: flex;
-            left: 50%;
-            transform: translateX(-50%);
+            left: 100px;
         }
         .thumb li {
             list-style: none;
@@ -134,7 +134,7 @@
             transform: translateY(-15px);
         }
         .thumb li img {
-            max-width: 100px;
+            max-width: 90px;
         }
 
         .sci {
@@ -158,9 +158,20 @@
             width: 100%;
             height: 100%;
             background-color: #c3f7f3;
-            
-           clip-path: polygon(0% 35%, 60% 35%, 60% 20%, 100% 50%, 60% 80%, 60% 65%, 0% 65%)
+            clip-path: polygon(00% 35%, 0% 35%, 0% 20%, 0% 50%, 0% 80%, 0% 65%, 0% 65%);
+            animation: slideInArrow 1.5s ease-out forwards;
+        } 
+        @keyframes slideInArrow {
+            from {
+            clip-path: polygon(0% 35%, 0% 35%, 0% 20%, 0% 50%, 0% 80%, 0% 65%, 0% 65%);
         }
+        to {
+        clip-path: polygon(0% 35%, 60% 35%, 60% 20%, 100% 50%, 60% 80%, 60% 65%, 0% 65%);
+       }
+    }
+    
+        
+     
 
     </style>
 </head>
@@ -168,7 +179,7 @@
     <section>
         <div class="circle"></div>
         <header>
-            <a href="" class="logo"><img src="./imgs/logo.png" alt=""></a>
+            <a href="" class="logo"><img src="" alt=""></a>
             <ul>
                 <li><a href="">♡  NEW ♡ </a></li>
                 <li><a href="">˖ 𓈒 𓂃 SHOP ALL 𓂃 𓈒 ˖</a></li>
@@ -183,7 +194,7 @@
                 <h2>It's not just Clothes. <br>It's <span>DAEL</span>.</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis culpa eum, soluta ab placeat, 
                     voluptas molestiae est excepturi consequatur aliquid voluptatibus enim qui tempore eaque voluptates dolores iusto iste nostrum.</p>
-                <a href="">Learn More</a>
+                <a href="">Buy now</a>
             </div>
 
             <div class="imgBox">
@@ -199,9 +210,9 @@
 
         </ul>
         <ul class="sci">
-            <li><a href=""><img src="./imgs/facebook.png" alt=""></a></li>
-            <li><a href=""><img src="./imgs/twitter.png" alt=""></a></li>
-            <li><a href=""><img src="./imgs/instagram.png" alt=""></a></li>
+            <li><a href=""><img src="" alt=""></a></li>
+            <li><a href=""><img src="" alt=""></a></li>
+            <li><a href=""><img src="" alt=""></a></li>
         </ul>
     </section>
 
@@ -214,6 +225,23 @@
             const circle = document.querySelector('.circle');
             circle.style.background = color;
         }
+        
+    function imgSlider(anything) {
+        document.querySelector('.starbucks').src = anything;
+    }
+
+    function changeCircleColor(color) {
+        const circle = document.querySelector('.circle');
+        
+        circle.style.animation = 'none';
+        
+        circle.offsetHeight; 
+        
+        circle.style.background = color;
+        
+        circle.style.animation = 'slideInArrow 1.5s ease-out forwards';
+    }
+
 
     </script>
 </body>
